@@ -218,7 +218,7 @@ async def get_image(xid):
             async with session.get(f"https://user.mypikpak.com/pzzl/image", params=params, ssl=False,
                                    proxy=PROXY) as response1:
                 img_data = await response1.read()
-                # 保存初始图片
+                #  保存初始图片
                 save_image(img_data, f'temp/1.png')
                 # 保存拼图图片
                 image.run(f'temp/1.png', frames)
